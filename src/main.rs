@@ -209,8 +209,8 @@ pub fn main() -> Result<(), String> {
             }
         }
 
-        if mode == "single" && ball.texture.x > (window_scale_x / 2) as i32
-            || player[1].score < player[0].score
+        if mode == "single"
+            && (ball.texture.x > (window_scale_x / 2) as i32 || player[1].score < player[0].score)
         {
             let pl2_text = player[1].texture;
             let in_range: bool = pl2_text.y + pl2_text.h / 2 + pl2_text.h / 4
